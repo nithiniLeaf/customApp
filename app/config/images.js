@@ -1,0 +1,111 @@
+/**
+ * Created by Nithin for iLeaf Solutions Pvt.Ltd
+ * on June 11, 2020
+ * Images - App config for images
+ */
+
+const images = {
+    flags: {
+      kuwait: require("../assets/flags/kuwait.png"),
+      ksa: require("../assets/flags/ksa.png"),
+      oman: require("../assets/flags/oman.png"),
+      beharin: require("../assets/flags/beharin.png"),
+      uae: require("../assets/flags/uae.png"),
+      qatar: require("../assets/flags/qatar.png"),
+      international: require("../assets/flags/international.png"),
+      globe: require("../assets/flags/globe.png")
+    },
+    check: {
+      checkmark: require("../assets/check.png")
+    },
+    fitlogo: require("../assets/images/Layer.png"),
+    breakfast: require("../assets/images/breakfast.png"),
+    lunch: require("../assets/images/lunch.png"),
+    dinner: require("../assets/images/dinner.png"),
+    cobra: require("../assets/images/cobra.png"),
+    chest: require("../assets/icons/chest.png"),
+    sport: require("../assets/icons/sport.png"),
+    sportSelected: require("../assets/icons/sportSelected.png"),
+    backArrow: require("../assets/icons/backArrow.png"),
+    excercise: require("../assets/images/excercise.png"),
+    meal: require("../assets/images/meal.png"),
+    logo: require("../assets/images/logo.png"),
+    logoLarge: require("../assets/images/logo_large.png"),
+    sampleAdd1: require("../assets/images/sampleAdd1.jpg"),
+    loginHeaderBg: require("../assets/images/login_header_bg.png"),
+    emptySearchResult: require("../assets/images/emptySearchResult.png"),
+    emptyFilterResult: require("../assets/images/emptyFilterResult.png"),
+    noWishlist: require("../assets/images/no_wishlist.png"),
+    noProductFoundPlaceholder: require("../assets/images/noProductFoundPlaceholder.png"),
+    edit: require("../assets/icons/edit.png"),
+    google: require("../assets/icons/google.png"),
+    fb: require("../assets/icons/facebook.png"),
+    apple: require("../assets/icons/apple.png"),
+    arrowRight: require("../assets/icons/arrow_right.png"),
+    // home: require("../assets/icons/TabIcons/home.png"),
+    // categories: require("../assets/icons/TabIcons/categories.png"),
+
+    flexibility: require("../assets/icons/TabIcons/flexibility.png"),
+    flexibilitySelected: require("../assets/icons/TabIcons/flexibility-selected.png"),
+    nutrition: require("../assets/icons/TabIcons/nutrition.png"),
+    nutritionSelected: require("../assets/icons/TabIcons/nutrition-selected.png"),
+    profile: require("../assets/icons/TabIcons/profile.png"),
+    profileSelected: require("../assets/icons/TabIcons/profile-selected.png"),
+    today: require("../assets/icons/TabIcons/today.png"),
+    todaySelected: require("../assets/icons/TabIcons/today-selected.png"),
+    workout: require("../assets/icons/TabIcons/workout.png"),
+    workoutSelected: require("../assets/icons/TabIcons/workout-selected.png"),
+
+    // wishlist: require("../assets/icons/TabIcons/wishlist.png"),
+    // more: require("../assets/icons/TabIcons/more.png"),
+    search: require("../assets/icons/search.png"),
+    cart: require("../assets/icons/cart.png"),
+    backButton: require("../assets/icons/backButton.png"),
+    filter: require("../assets/icons/filter.png"),
+    variants: require("../assets/icons/variants.png"),
+    share: require("../assets/icons/share.png"),
+    flag1: require("../assets/icons/flag1.png"),
+    close: require("../assets/icons/close.png"),
+    likeImage: require("../assets/icons/likeImage.png"),
+    image360: require("../assets/icons/image360.png"),
+    phone: require("../assets/icons/phone.png"),
+    watsapp: require("../assets/icons/whatsapp.png"),
+    envelope: require("../assets/icons/envelope.png"),
+    cartEmpty: require("../assets/images/cartempty.png"),
+    addressEmpty: require("../assets/images/emptyAddress.png"),
+    message: require("../assets/icons/message.png"),
+    tick: require("../assets/icons/tick.png"),
+    whiteTick: require("../assets/icons/whiteTick.png"),
+    refreshIcon: require("../assets/icons/refreshIcon.png"),
+    likeButtonWithShade: require("../assets/icons/likeButtonWithShade.png"),
+    unLikeImageWithShade: require("../assets/icons/unLikeImageWithShade.png"),
+    addressLocation: require("../assets/icons/addressLocation.png"),
+    addressPhone: require("../assets/icons/addressPhone.png"),
+    addressUser: require("../assets/icons/addressUser.png"),
+    lock: require("../assets/icons/lock.png"),
+    mail: require("../assets/icons/mail.png"),
+    notepad: require("../assets/icons/notepad.png"),
+    comment: require("../assets/icons/comment.png"),
+  
+    splash: require("../assets/images/splash.png"),
+    placeHolderProduct: require("../assets/images/placeHolderProduct.jpg"),
+    filterIcons: {
+      check_tick: require("../assets/icons/check_box_white.png"),
+      check_outline: require("../assets/icons/outline_check_box.png"),
+      toggle_outline: require("../assets/icons/outline_toggle.png"),
+      toggle_selected: require("../assets/icons/selected_toggle.png"),
+      hair_image: require("../assets/icons/e.jpg")
+    },
+    videoPlay: require("../assets/icons/videoPlay.png"),
+    womenShopping: require("../assets/images/women-shopping-36.png"),
+    bookmark: require("../assets/icons/bookmark.png"),
+    orderHistory: require("../assets/icons/order_history.png"),
+    flag: require("../assets/icons/flag.png"),
+    switchLanguage: require("../assets/icons/switch_language.png"),
+    phoneSolid: require("../assets/icons/phone_solid.png"),
+    alarm: require("../assets/icons/alarm.png"),
+    logout: require("../assets/icons/logout.png")
+  };
+  
+  export default images;
+  

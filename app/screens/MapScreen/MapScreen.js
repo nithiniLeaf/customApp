@@ -72,15 +72,8 @@ class HomeScreen extends Component {
   };
 
   render() {
-    let initialRegion = {
-      latitude: 41.068038,
-      longitude: 29.061824,
-      latitudeDelta: 0.01,
-      longitudeDelta: 0.01,
-    };
-    let myCoordinate = {latitude: 41.068038, longitude: 29.061824};
     return (
-      <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
+      <View style={styles.container}>
         <MapView
           style={{...styles.map, marginTop: this.state.marginTop}}
           initialRegion={this.state.region}

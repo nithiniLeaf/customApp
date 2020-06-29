@@ -16,7 +16,9 @@ import {
 import {LoginButton, AccessToken} from 'react-native-fbsdk';
 import InstagramLogin from 'react-native-instagram-login';
 import CookieManager from '@react-native-community/cookies';
+import auth from '@react-native-firebase/auth';
 import firebase from '@react-native-firebase/app';
+import styles from '../CameraScreen/styles';
 // import styles from './styles';
 
 class LoginScreen extends Component {
@@ -48,68 +50,9 @@ class LoginScreen extends Component {
     GoogleSignin.configure({
       webClientId:
         '91137978885-94d40sdjfm8rl11fckcs5lr2jie154lp.apps.googleusercontent.com',
+
       offlineAccess: true,
     });
-  }
-
-  render() {
-    return (
-      <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
-        <TouchableOpacity
-          style={{backgroundColor: 'red'}}
-          onPress={() => this.props.navigation.navigate('Drawers')}>
-          <Text
-            style={{
-              color: 'white',
-              paddingVertical: 10,
-              paddingHorizontal: 20,
-            }}>
-            Login
-          </Text>
-        </TouchableOpacity>
-        <GoogleSigninButton
-          style={{width: 192, height: 48}}
-          size={GoogleSigninButton.Size.Wide}
-          color={GoogleSigninButton.Color.Dark}
-          onPress={this._signIn}
-        />
-        <LoginButton
-          onLoginFinished={(error, result) => {
-            if (error) {
-              console.log('login has error: ' + result.error);
-            } else if (result.isCancelled) {
-              console.log('login is cancelled.');
-            } else {
-              AccessToken.getCurrentAccessToken().then(data => {
-                console.log(data.accessToken.toString());
-              });
-            }
-          }}
-          onLogoutFinished={() => console.log('logout.')}
-        />
-        <TouchableOpacity
-          style={{backgroundColor: 'red', marginTop: 5}}
-          onPress={() => this.instagramLogin.show()}>
-          <Text
-            style={{
-              color: 'white',
-              paddingVertical: 10,
-              paddingHorizontal: 20,
-            }}>
-            Instagram Login
-          </Text>
-        </TouchableOpacity>
-        <InstagramLogin
-          ref={ref => (this.instagramLogin = ref)}
-          appId="your-app-id"
-          appSecret="your-app-secret"
-          redirectUrl="your-redirect-Url"
-          scopes={['user_profile', 'user_media']}
-          onLoginSuccess={this.setIgToken}
-          onLoginFailure={data => console.log(data)}
-        />
-      </View>
-    );
   }
   _signIn = async () => {
     try {
@@ -141,6 +84,7 @@ class LoginScreen extends Component {
           Alert.alert('play services not available or outdated');
           break;
         default:
+          console.log(error);
           Alert.alert('Something went wrong', error.toString());
           this.setState({
             error,
@@ -148,6 +92,52 @@ class LoginScreen extends Component {
       }
     }
   };
+  render() {
+    const {navigation} = this.props;
+    return (
+      <View style={styles.container}>
+        <TouchableOpacity
+          style={styles.img_container}
+          onPress={() => navigation.navigate('Drawers')}>
+          <Text style={styles.text_container}>Login</Text>
+        </TouchableOpacity>
+        <GoogleSigninButton
+          style={styles.google_login}
+          size={GoogleSigninButton.Size.Wide}
+          color={GoogleSigninButton.Color.Dark}
+          onPress={this._signIn}
+        />
+        <LoginButton
+          onLoginFinished={(error, result) => {
+            if (error) {
+              console.log('login has error: ' + result.error);
+            } else if (result.isCancelled) {
+              console.log('login is cancelled.');
+            } else {
+              AccessToken.getCurrentAccessToken().then(data => {
+                console.log(data.accessToken.toString());
+              });
+            }
+          }}
+          onLogoutFinished={() => console.log('logout.')}
+        />
+        <TouchableOpacity
+          style={styles.insta_background}
+          onPress={() => this.instagramLogin.show()}>
+          <Text style={styles.insta_login}>Instagram Login</Text>
+        </TouchableOpacity>
+        <InstagramLogin
+          ref={ref => (this.instagramLogin = ref)}
+          appId="2555012831429205"
+          appSecret="c67127e5dcd003f1f442d52938d6203e"
+          redirectUrl="https://www.google.com/"
+          scopes={['user_profile', 'user_media']}
+          onLoginSuccess={this.setIgToken}
+          onLoginFailure={data => console.log(data)}
+        />
+      </View>
+    );
+  }
 }
 
 export default LoginScreen;

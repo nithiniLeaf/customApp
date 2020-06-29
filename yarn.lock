@@ -1029,6 +1029,11 @@
     opencollective-postinstall "^2.0.1"
     superstruct "^0.6.2"
 
+"@react-native-firebase/auth@^8.0.8":
+  version "8.0.8"
+  resolved "https://registry.yarnpkg.com/@react-native-firebase/auth/-/auth-8.0.8.tgz#0b399c47151371a7c70c5a4d8ffed8483032fd70"
+  integrity sha512-b5yNss1OIl2Wx91ai9o226GCfG+1DmQS1ADTMQS9RJpLwTiBU58AuQO9K2IWdTFKIhMif/LB4cE3UQSASie7VA==
+
 "@react-native-firebase/messaging@^7.1.7":
   version "7.1.7"
   resolved "https://registry.yarnpkg.com/@react-native-firebase/messaging/-/messaging-7.1.7.tgz#b3d1e0cae013e67c81c41ebdb3157359f028ea5d"
@@ -5177,7 +5182,7 @@ react-native-screens@^2.9.0:
   resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-2.9.0.tgz#ead2843107ba00fee259aa377582e457c74f1f3b"
   integrity sha512-5MaiUD6HA3nzY3JbVI8l3V7pKedtxQF3d8qktTVI0WmWXTI4QzqOU8r8fPVvfKo3MhOXwhWBjr+kQ7DZaIQQeg==
 
-react-native-webview@^10.2.3:
+react-native-webview@^10.2.3, react-native-webview@^10.3.1:
   version "10.3.1"
   resolved "https://registry.yarnpkg.com/react-native-webview/-/react-native-webview-10.3.1.tgz#04a2b17a37daf04575b3abd10b1fb29d2c154c6f"
   integrity sha512-Ac0v4lFaJl5P/haLook+UIKMW4Ru5xg0+AdxD2oJRB2TPgdqoATziYNU0LBMjntlxDp+DVzdr3fVDuLMdox0tg==

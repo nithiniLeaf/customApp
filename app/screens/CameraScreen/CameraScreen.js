@@ -8,7 +8,7 @@ import {
   Image,
 } from 'react-native';
 import ImagePicker from 'react-native-image-picker';
-// import styles from './styles';
+import styles from './styles';
 
 const options = {
   title: 'Custom app',
@@ -48,22 +48,10 @@ class CameraScreen extends Component {
 
   render() {
     return (
-      <View style={{justifyContent: 'center', alignItems: 'center', flex: 1}}>
-        <Image
-          source={this.state.avatarSource}
-          style={{width: '100%', height: 300}}
-        />
-        <TouchableOpacity
-          style={{backgroundColor: 'red'}}
-          onPress={this.choose}>
-          <Text
-            style={{
-              color: 'white',
-              paddingVertical: 10,
-              paddingHorizontal: 20,
-            }}>
-            Select Image
-          </Text>
+      <View style={styles.container}>
+        <Image source={this.state.avatarSource} style={styles.img_container} />
+        <TouchableOpacity style={styles.background_text} onPress={this.choose}>
+          <Text style={styles.text_container}>Select Image</Text>
         </TouchableOpacity>
       </View>
     );

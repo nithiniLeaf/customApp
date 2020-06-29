@@ -14,14 +14,13 @@ class HomeScreen extends Component {
     this.state = {};
   }
 
-
   render() {
     return (
-        <View style={{justifyContent:"center",alignItems:"center",flex:1}}>
-          <TouchableOpacity style={{backgroundColor:"red"}}>
-              <Text style={{color:"white",paddingVertical:10,paddingHorizontal:20}}>HomeScreen</Text>
-          </TouchableOpacity>
-        </View>
+      <View style={styles.container}>
+        <TouchableOpacity style={styles.img_container}>
+          <Text style={styles.text_container}>HomeScreen</Text>
+        </TouchableOpacity>
+      </View>
     );
   }
 }

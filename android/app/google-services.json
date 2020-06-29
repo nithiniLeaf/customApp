@@ -15,14 +15,6 @@
       },
       "oauth_client": [
         {
-          "client_id": "91137978885-oge1ik8bko9pq1km13o0h3goh60ds0ms.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.sociallogin",
-            "certificate_hash": "869d7ec7cbcdc19a81acdfdb92d5e1ed89abdd4f"
-          }
-        },
-        {
           "client_id": "91137978885-94d40sdjfm8rl11fckcs5lr2jie154lp.apps.googleusercontent.com",
           "client_type": 3
         }

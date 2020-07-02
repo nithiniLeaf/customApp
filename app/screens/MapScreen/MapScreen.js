@@ -9,20 +9,7 @@ import {
 } from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Marker} from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
-// import styles from './styles';
-
-const styles = StyleSheet.create({
-  container: {
-    ...StyleSheet.absoluteFillObject,
-    height: 400,
-    width: 400,
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-  },
-  map: {
-    ...StyleSheet.absoluteFillObject,
-  },
-});
+import styles from './styles';
 
 class HomeScreen extends Component {
   constructor(props) {
@@ -73,7 +60,7 @@ class HomeScreen extends Component {
 
   render() {
     return (
-      <View style={styles.container}>
+      <View style={styles.main_container}>
         <MapView
           style={{...styles.map, marginTop: this.state.marginTop}}
           initialRegion={this.state.region}

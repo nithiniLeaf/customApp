@@ -18,7 +18,7 @@ import InstagramLogin from 'react-native-instagram-login';
 import CookieManager from '@react-native-community/cookies';
 import auth from '@react-native-firebase/auth';
 import firebase from '@react-native-firebase/app';
-import styles from '../CameraScreen/styles';
+import styles from './styles';
 // import styles from './styles';
 
 class LoginScreen extends Component {
@@ -93,12 +93,11 @@ class LoginScreen extends Component {
     }
   };
   render() {
-    const {navigation} = this.props;
     return (
       <View style={styles.container}>
         <TouchableOpacity
-          style={styles.img_container}
-          onPress={() => navigation.navigate('Drawers')}>
+          style={styles.background_text}
+          onPress={() => this.props.navigation.navigate('SignupScreen')}>
           <Text style={styles.text_container}>Login</Text>
         </TouchableOpacity>
         <GoogleSigninButton

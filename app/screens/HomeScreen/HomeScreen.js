@@ -6,19 +6,22 @@ import {
   TouchableOpacity,
   Text,
 } from 'react-native';
-// import styles from './styles';
+import AsyncStorage from '@react-native-community/async-storage';
+import styles from './styles';
 
 class HomeScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
-
+  async componentDidMount() {
+    const userId = await AsyncStorage.getItem('userId');
+  }
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity style={styles.img_container}>
-          <Text style={styles.text_container}>HomeScreen</Text>
+        <TouchableOpacity style={styles.text_container}>
+          <Text>HomeScreen</Text>
         </TouchableOpacity>
       </View>
     );
